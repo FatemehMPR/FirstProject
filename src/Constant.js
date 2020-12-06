@@ -1,0 +1,1 @@
+export const LoginImage = require('../src/assets/image/foodImage.png');
