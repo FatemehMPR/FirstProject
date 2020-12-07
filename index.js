@@ -10,6 +10,8 @@ import Login from "./src/screens/Login";
 import CustomBtn from "./src/Components/CustomBtn";
 import ImageScreen from "./src/screens/ImageScreen";
 import ImageDetail from "./src/Components/ImageDetail";
+import CounterScreen from "./src/screens/CounterScreen";
+import ColorScreen from "./src/screens/ColorScreen";
 
 
 Navigation.registerComponent('com.myApp.WelcomeScreen', () => App);
@@ -20,6 +22,8 @@ Navigation.registerComponent('myLogin', () => Login);
 Navigation.registerComponent('myCustomBtn', () => CustomBtn);
 Navigation.registerComponent('myImageScreen', () => ImageScreen);
 Navigation.registerComponent('myImageDetail', () => ImageDetail);
+Navigation.registerComponent('myCounterScreen', () => CounterScreen);
+Navigation.registerComponent('myColorScreen', () => ColorScreen);
 
 Navigation.events().registerAppLaunchedListener(() => {
    Navigation.setRoot({
@@ -29,7 +33,7 @@ Navigation.events().registerAppLaunchedListener(() => {
            {
              component: {
                //name: 'com.myApp.WelcomeScreen'
-               name: 'myImageScreen',
+               name: 'myHomeScreen',
                options:{
                  topBar:{
                    visible:false

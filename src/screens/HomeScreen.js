@@ -41,8 +41,62 @@ const HomeScreen = (Props) => {
         title="Go to List Demo"
       />
      
+
+     <Button
+        onPress={() =>  Navigation.push(Props.componentId ,
+          {
+              component:{
+                name: 'myImageScreen',
+                  passProps:{
+                      myComponentId: Props.componentId,
+                     
+      
+                  }
+              }
+          } )
+          
+        }
+        title="Go to Image Screen Demo"
+      />
+     
+     <Button
+        onPress={() =>  Navigation.push(Props.componentId ,
+          {
+              component:{
+                name: 'myCounterScreen',
+                  passProps:{
+                      myComponentId: Props.componentId,
+                     
+      
+                  }
+              }
+          } )
+          
+        }
+        title="Go to Counter Screen Demo"
+      />
+     
+     <Button
+        onPress={() =>  Navigation.push(Props.componentId ,
+          {
+              component:{
+                name: 'myColorScreen',
+                  passProps:{
+                      myComponentId: Props.componentId,
+                     
+      
+                  }
+              }
+          } )
+          
+        }
+        title="Go to Color Screen Demo"
+      />
+
     </View>
   );
+
+  
 };
 const styles = StyleSheet.create({
   text: {
