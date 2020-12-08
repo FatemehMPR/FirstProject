@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import{Text, StyleSheet, View, Image, TextInput,Button,TouchableHighlight,TouchableWithoutFeedback,TouchableOpacity, Alert} from 'react-native';
+import{Text, StyleSheet, View, Image
+    ,KeyboardAvoidingView,
+     TextInput,Button,TouchableHighlight,TouchableWithoutFeedback,TouchableOpacity, Alert} from 'react-native';
 import{String} from '../assets/String';
 import{Colors} from '../assets/Colors';
 import{LoginImage} from '../Constant';
 import CustomBtn from '../Components/CustomBtn';
-import {Navigation} from 'react-native-navigation';
+import {PushToScreen} from '../function/myNavigation';
 
-import {
+import { 
   responsiveHeight,
   responsiveWidth,
   responsiveFontSize,
@@ -21,23 +23,14 @@ const Login = (Props) =>{
 
 function onClick(){
   //  Alert.alert(title, 'You pressed me!')
-
-  Navigation.push(Props.componentId ,
-    {
-        component:{
-            name: 'myHomeScreen',
-            passProps:{
-                myComponentId: Props.componentId,
-                userName: name
-
-            }
-        }
-    } )
-
+  name!== '' ?
+  PushToScreen(Props.componentId, 'myHome', name,false,true) :Alert.alert('please enter your name')
+ 
 }
 
     return(
-        <View style= {styles.container}>
+        <KeyboardAvoidingView behavior = 'position'>
+<View style= {styles.container}>
             <Image style={styles.img}
              source = {LoginImage}/>
             <Text style ={styles.textStyle} >{String.welcomeText}</Text>
@@ -56,6 +49,8 @@ function onClick(){
             
 
         </View>
+        </KeyboardAvoidingView>
+        
     );
 };
 

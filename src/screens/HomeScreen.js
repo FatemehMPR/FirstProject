@@ -3,10 +3,11 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 import {Navigation} from 'react-native-navigation';
 
 const HomeScreen = (Props) => {
+  console.log('Props', Props);
   return (
     <View>
       
-      <Text style={styles.text}>Hello</Text>
+      <Text style={styles.text}>{Props.userName}</Text>
       <Button
         onPress={() =>  Navigation.push(Props.componentId ,
           {
@@ -139,6 +140,22 @@ const HomeScreen = (Props) => {
           
         }
         title="Go to Text Screen Demo"
+      />
+<Button
+        onPress={() =>  Navigation.push(Props.componentId ,
+          {
+              component:{
+                name: 'myBoxScreen',
+                  passProps:{
+                      myComponentId: Props.componentId,
+                     
+      
+                  }
+              }
+          } )
+          
+        }
+        title="Go to Box Screen Demo"
       />
 
     </View>

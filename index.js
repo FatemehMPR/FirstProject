@@ -16,6 +16,9 @@ import SquareScreen from "./src/screens/SquareScreen";
 import ReducerSquareScreen from "./src/screens/ReducerSquareScreen";
 import ColorCounter from "./src/Components/ColorCounter";
 import TextScreen from "./src/screens/TextScreen";
+import BoxScreen from "./src/screens/BoxScreen";
+import myHomeScreen from "./src/screens/myHomeScreen";
+import SideMenu from "./src/screens/SideMenu";
 
 
 Navigation.registerComponent('com.myApp.WelcomeScreen', () => App);
@@ -32,25 +35,75 @@ Navigation.registerComponent('mySquareScreen', () => SquareScreen);
 Navigation.registerComponent('myColorCounter', () => ColorCounter);
 Navigation.registerComponent('myReducerSquareScreen', () => ReducerSquareScreen);
 Navigation.registerComponent('myTextScreen', () => TextScreen);
+Navigation.registerComponent('myBoxScreen', () => BoxScreen);
+Navigation.registerComponent('myHome', () => myHomeScreen);
+Navigation.registerComponent('mySideMenu', () => SideMenu);
+
+
+
 
 Navigation.events().registerAppLaunchedListener(() => {
+
+  Navigation.setRoot({
+      root: {
+         sideMenu:{
+             center:{
+                 stack: {
+                     children: [
+                         {
+                             component: {
+                                 id: 'myHomeId',
+                                 name: 'myHome',
+                                 options:{
+                                     topBar:{
+                                         visible:false
+                                     }
+                                 }
+                             },
+                         },
+                     ],
+                 },
+             },
+             left:{
+                 component:{
+                     name:'mySideMenu'
+                 }
+             }
+         }
+      },
+  });
+  
+  Navigation.setDefaultOptions({
+    topBar:{
+      visible: false
+  }
+  })
+});
+
+
+/*Navigation.events().registerAppLaunchedListener(() => {
    Navigation.setRoot({
      root: {
-       stack: {
-         children: [
-           {
-             component: {
-               //name: 'com.myApp.WelcomeScreen'
-               name: 'myHomeScreen',
-               options:{
-                 topBar:{
-                   visible:false
-                 }
-               } 
-             }
-           }
-         ]
+       SideMenu:{
+         center:{
+          stack: {
+            children: [
+              {
+                component: {
+                  //name: 'com.myApp.WelcomeScreen'
+                  name: 'myLogin',
+                  options:{
+                    topBar:{
+                      visible:false
+                    }
+                  } 
+                }
+              }
+            ]
+          }
+         }
        }
+
      }
   });
-});
+});*/
