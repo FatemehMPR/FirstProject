@@ -92,6 +92,54 @@ const HomeScreen = (Props) => {
         }
         title="Go to Color Screen Demo"
       />
+<Button
+        onPress={() =>  Navigation.push(Props.componentId ,
+          {
+              component:{
+                name: 'mySquareScreen',
+                  passProps:{
+                      myComponentId: Props.componentId,
+                     
+      
+                  }
+              }
+          } )
+          
+        }
+        title="Go to Square Screen Demo"
+      />
+<Button
+        onPress={() =>  Navigation.push(Props.componentId ,
+          {
+              component:{
+                name: 'myReducerSquareScreen',
+                  passProps:{
+                      myComponentId: Props.componentId,
+                     
+      
+                  }
+              }
+          } )
+          
+        }
+        title="Go to Reducer Square Screen Demo"
+      />
+<Button
+        onPress={() =>  Navigation.push(Props.componentId ,
+          {
+              component:{
+                name: 'myTextScreen',
+                  passProps:{
+                      myComponentId: Props.componentId,
+                     
+      
+                  }
+              }
+          } )
+          
+        }
+        title="Go to Text Screen Demo"
+      />
 
     </View>
   );
