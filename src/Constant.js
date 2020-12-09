@@ -4,3 +4,7 @@ export const mountainImage = require('../src/assets/image/mountain.jpg');
 export const beachImage = require('../src/assets/image/beach.jpg');
 export const menuIcon = require('../src/assets/image/menuIcon.png');
 export const closeIcon = require('../src/assets/image/close.png');
+export const deliveryImg = require('./assets/image/deliveryImg.png');
+export const healthyFoodImg = require('./assets/image/healthyFoodImg.png');
+export const romanticImg = require('./assets/image/romanticImg.png');
+export const deliciousImg = require('./assets/image/deliciousImg.png');

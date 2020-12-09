@@ -14,6 +14,7 @@ import {
     responsiveFontSize,
     useResponsiveFontSize
   } from "react-native-responsive-dimensions";
+import { color } from 'react-native-reanimated';
 
 
 const SideMenu = (Props) =>{
@@ -24,7 +25,7 @@ const SideMenu = (Props) =>{
 
  <View style={SideMenuStyles.container}>
 
-    <TouchableOpacity style={SideMenuStyles.closeBtn} onPress={() =>
+    <TouchableOpacity style={ SideMenuStyles.closeBtn} onPress={() =>
         setSideMenuVisibility(Props.componentId, false, true)}>
 
         <Image style={SideMenuStyles.closeImg} source={closeIcon}/>
@@ -38,6 +39,13 @@ const SideMenu = (Props) =>{
 };
 const SideMenuStyles = StyleSheet.create({
 
+    container: {
+        backgroundColor: Colors.btnColor,
+        flex: 1,
+        borderTopRightRadius:responsiveWidth(4),
+        borderBottomRightRadius:responsiveWidth(4),
+        width:responsiveWidth(50),
+    },
     closeBtn: {
         marginHorizontal: responsiveWidth(4),
         marginVertical: responsiveHeight(2),

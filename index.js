@@ -19,6 +19,7 @@ import TextScreen from "./src/screens/TextScreen";
 import BoxScreen from "./src/screens/BoxScreen";
 import myHomeScreen from "./src/screens/myHomeScreen";
 import SideMenu from "./src/screens/SideMenu";
+import StaggereView from "./src/screens/StaggereView";
 
 
 Navigation.registerComponent('com.myApp.WelcomeScreen', () => App);
@@ -38,6 +39,7 @@ Navigation.registerComponent('myTextScreen', () => TextScreen);
 Navigation.registerComponent('myBoxScreen', () => BoxScreen);
 Navigation.registerComponent('myHome', () => myHomeScreen);
 Navigation.registerComponent('mySideMenu', () => SideMenu);
+Navigation.registerComponent('myStaggereView', () => StaggereView);
 
 
 
@@ -53,7 +55,7 @@ Navigation.events().registerAppLaunchedListener(() => {
                          {
                              component: {
                                  id: 'myHomeId',
-                                 name: 'myHome',
+                                 name: 'myStaggereView',
                                  options:{
                                      topBar:{
                                          visible:false
