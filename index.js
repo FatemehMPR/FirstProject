@@ -20,6 +20,10 @@ import BoxScreen from "./src/screens/BoxScreen";
 import myHomeScreen from "./src/screens/myHomeScreen";
 import SideMenu from "./src/screens/SideMenu";
 import StaggereView from "./src/screens/StaggereView";
+//Restaurant  App
+import SearchScreen from "./src/ResturanApp/src/screen/SearchScreen";
+import ResultsShowScreen from "./src/ResturanApp/src/screen/ResultsShowScreen";
+import ResultsList from "./src/ResturanApp/src/component/ResultsList";
 
 
 Navigation.registerComponent('com.myApp.WelcomeScreen', () => App);
@@ -41,10 +45,15 @@ Navigation.registerComponent('myHome', () => myHomeScreen);
 Navigation.registerComponent('mySideMenu', () => SideMenu);
 Navigation.registerComponent('myStaggereView', () => StaggereView);
 
+//Resturant App
+Navigation.registerComponent('mySearchScreen', () => SearchScreen);
+Navigation.registerComponent('myResultsShowScreen', () => ResultsShowScreen);
+Navigation.registerComponent('myResultsList', () => ResultsList);
 
 
 
-Navigation.events().registerAppLaunchedListener(() => {
+
+/*Navigation.events().registerAppLaunchedListener(() => {
 
   Navigation.setRoot({
       root: {
@@ -55,10 +64,12 @@ Navigation.events().registerAppLaunchedListener(() => {
                          {
                              component: {
                                  id: 'myHomeId',
-                                 name: 'myStaggereView',
+                                 name: 'mySearchScreen',
+                                 
                                  options:{
                                      topBar:{
-                                         visible:false
+                                         visible:false,
+                                        
                                      }
                                  }
                              },
@@ -80,32 +91,31 @@ Navigation.events().registerAppLaunchedListener(() => {
       visible: false
   }
   })
-});
+});*/
 
 
-/*Navigation.events().registerAppLaunchedListener(() => {
+Navigation.events().registerAppLaunchedListener(() => {
    Navigation.setRoot({
      root: {
-       SideMenu:{
-         center:{
           stack: {
             children: [
               {
                 component: {
                   //name: 'com.myApp.WelcomeScreen'
-                  name: 'myLogin',
+                  name: 'mySearchScreen',
                   options:{
                     topBar:{
-                      visible:false
+                      visible:true,
+                      title : 'ffff'
                     }
                   } 
                 }
               }
             ]
           }
-         }
-       }
+         
+       
 
      }
   });
-});*/
+});

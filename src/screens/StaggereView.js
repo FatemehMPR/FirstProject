@@ -38,15 +38,15 @@ const StaggereView =() =>{
             
             <View style = { styles.innerView }>
             
-            {_staggered (0.46,Colors.stagTheme1,deliveryImg,String.delivery)}
-            {_staggered (0.46,Colors.stagTheme4,healthyFoodImg,String.healthy)}
+            {_staggered (0.48,Colors.stagTheme1,deliveryImg,String.delivery)}
+            {_staggered (0.48,Colors.stagTheme4,healthyFoodImg,String.healthy)}
 
             </View>
 
-            <View styles = { styles.innerView}>
+            <View style = { styles.innerView}>
                 
-                {_staggered (0.36,Colors.stagTheme3, romanticImg,String.romantic)}
-                {_staggered (0.56,Colors.stagTheme2,deliciousImg,String.delicious)}
+                {_staggered (0.48,Colors.stagTheme3, romanticImg,String.romantic)}
+                {_staggered (0.48,Colors.stagTheme2,deliciousImg,String.delicious)}
                 
             </View>
             
@@ -56,17 +56,16 @@ const StaggereView =() =>{
     const styles = StyleSheet.create ({
 
         continer:{
-            backgroundColor: 'yellow',
             flex:0.4 , 
             justifyContent:'space-around',
             marginTop:responsiveHeight(2),
 
         },
         innerView:{
-            backgroundColor:'blue',
             flex: 0.46,
             flexDirection:'row',
             justifyContent:'space-around',
+         
         }
 
     });

@@ -6,6 +6,6 @@ export const Colors = {
     txtOnDarkTheme:'#fff',
     stagTheme1:'#EF5050',
     stagTheme2:'#F7931E',
-    stagTheme3:'#167dcc',
-    stagTheme4:'#6dd969',
+    stagTheme3:'#3396ff',
+    stagTheme4:'#33ff6b',
 };
