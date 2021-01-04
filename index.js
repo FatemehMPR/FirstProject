@@ -20,6 +20,7 @@ import BoxScreen from "./src/screens/BoxScreen";
 import myHomeScreen from "./src/screens/myHomeScreen";
 import SideMenu from "./src/screens/SideMenu";
 import StaggereView from "./src/screens/StaggereView";
+import IntroPage from "./src/screens/IntroPage";
 //Restaurant  App
 import SearchScreen from "./src/ResturanApp/src/screen/SearchScreen";
 import ResultsShowScreen from "./src/ResturanApp/src/screen/ResultsShowScreen";
@@ -44,6 +45,7 @@ Navigation.registerComponent('myBoxScreen', () => BoxScreen);
 Navigation.registerComponent('myHome', () => myHomeScreen);
 Navigation.registerComponent('mySideMenu', () => SideMenu);
 Navigation.registerComponent('myStaggereView', () => StaggereView);
+Navigation.registerComponent('myIntroPage', () => IntroPage);
 
 //Resturant App
 Navigation.registerComponent('mySearchScreen', () => SearchScreen);
@@ -102,7 +104,7 @@ Navigation.events().registerAppLaunchedListener(() => {
               {
                 component: {
                   //name: 'com.myApp.WelcomeScreen'
-                  name: 'mySearchScreen',
+                  name: 'myIntroPage',
                   options:{
                     topBar:{
                       visible:true,
