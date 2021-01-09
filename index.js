@@ -26,6 +26,13 @@ import SearchScreen from "./src/ResturanApp/src/screen/SearchScreen";
 import ResultsShowScreen from "./src/ResturanApp/src/screen/ResultsShowScreen";
 import ResultsList from "./src/ResturanApp/src/component/ResultsList";
 
+//test api
+import Test from "./src/test/screen/Test";
+import TestDetailShow from "./src/test/screen/TestDetailShow";
+
+//test for ContextApi
+import HomeContextApi from "./src/testContextApi/HomeContextApi";
+
 
 Navigation.registerComponent('com.myApp.WelcomeScreen', () => App);
 Navigation.registerComponent('myComponentSreen', () => ComponentSreen);
@@ -51,6 +58,13 @@ Navigation.registerComponent('myIntroPage', () => IntroPage);
 Navigation.registerComponent('mySearchScreen', () => SearchScreen);
 Navigation.registerComponent('myResultsShowScreen', () => ResultsShowScreen);
 Navigation.registerComponent('myResultsList', () => ResultsList);
+
+//test api
+Navigation.registerComponent('myTest', () => Test);
+Navigation.registerComponent('myTestDetailShow', () => TestDetailShow);
+
+//test for ContextApi
+Navigation.registerComponent('myHomeContextApi', () => HomeContextApi);
 
 
 
@@ -104,7 +118,9 @@ Navigation.events().registerAppLaunchedListener(() => {
               {
                 component: {
                   //name: 'com.myApp.WelcomeScreen'
-                  name: 'myIntroPage',
+                  //name: 'myIntroPage',
+                  name: 'myTest',
+                  //name: 'myHomeContextApi',
                   options:{
                     topBar:{
                       visible:true,
