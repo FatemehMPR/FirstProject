@@ -11,13 +11,10 @@ const Test = (Props) =>{
         getFromApi()
     },[])
 
-    /* const newResponse = async() =>{
-        const response = await TestApi.get('product?index=1&pagesize=10&order=NEW&isservice=false&active')
-        console.log(response.data)
-    } */
+   
 
 function getFromApi() {
-    TestApi.get('product?index=1&pagesize=10&order=NEW&isservice=false&active')
+    TestApi.get('')
     .then(function(response) {
         setItem(response.data.Value.List)
         //console.log(response.data.Value.List[0].Id)
